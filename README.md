@@ -1,35 +1,19 @@
+# Playwright E2E Framework (JavaScript)
 
----
+## Overview
+End-to-End automation framework built with Playwright and JavaScript, designed to validate critical user journeys using a risk-based and maintainable testing approach.
 
-## Testing Strategy
+## Tech Stack
+- Playwright
+- JavaScript (Node.js)
 
-### What is covered
-- Critical user journeys
-- Happy path and negative scenarios
-- Edge cases and boundary conditions
-- Regression scenarios for high-risk areas
+## Key Features
+- Tagged test suites for selective execution (@smoke, @regression, @edge, @api)
+- Authentication handled via generated storage state (not committed)
+- Reduced flakiness and faster execution by avoiding repeated logins
+- CI-ready structure with HTML reporting
 
-### What is intentionally avoided
-- Low-value UI checks
-- Redundant validations already covered by API tests
-
-This approach ensures fast feedback and meaningful coverage.
-
----
-
-## Risk-Based Testing Approach
-
-Test scenarios are selected based on:
-- Business impact
-- Frequency of use
-- Historical defect patterns
-- Complexity and integration points
-
-High-risk areas receive deeper coverage, while low-risk areas are validated through lighter checks.
-
----
-
-## Installation
-
+## Setup
 ```bash
-npm install
+npm ci
+npx playwright install

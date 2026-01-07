@@ -7,14 +7,12 @@ import { users, checkoutData } from "../../fixtures/testData.js";
 
 test.describe("Edge Cases — Cart & Checkout State (SauceDemo)",
     { tag: "@edge" }, () => {
+  test.use({ storageState: "storage/adminState.json" });
   const itemName = "Sauce Labs Backpack";
 
   test.beforeEach(async ({ page, baseURL }) => {
-    const loginPage = new LoginPage(page);
     const inventory = new InventoryPage(page);
-
-    await loginPage.goto(baseURL);
-    await loginPage.login(users.standard.username, users.standard.password);
+    await page.goto(`${baseURL}inventory.html`);
     await inventory.expectLoaded();
   });
 
