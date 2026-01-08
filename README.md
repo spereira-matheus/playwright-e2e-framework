@@ -13,7 +13,7 @@ This repository demonstrates real-world QA practices rather than tutorial-style 
 - GitHub Actions (CI)
 
 ## Key Features
-- Tagged test suites for selective execution (@smoke, @regression, @edge, @api)
+- Tagged test suites for selective execution (@smoke, @regression, @edge)
 - Authentication handled via generated storage state (not committed)
 - Faster and more stable tests by avoiding repeated logins
 - CI pipeline running smoke tests on every push and pull request
